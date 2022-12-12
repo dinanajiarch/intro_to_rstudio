@@ -42,6 +42,8 @@ The Institute of Mixture Modeling for Equity-Oriented Researchers, Scholars, and
 
 How to reference this walkthrough: *This work was supported by the IMMERSE Project* (IES - 305B220021)
 
+Visit our [GitHub](https://github.com/immerse-ucsb) account to download the materials needed for this walkthrough.
+
 ------------------------------------------------------------------------
 
 # Introduction to R and RStudio
@@ -50,7 +52,27 @@ This walkthrough is presented by the IMMERSE team and will go through some commo
 There are many free resources available to get started with R and RStudio.
 One of our favorites is [*R for Data Science*](https://r4ds.had.co.nz/).
 
-## Step 1: Create a new R-project in RStudio
+------------------------------------------------------------------------
+
+## PART 1: Installation
+
+------------------------------------------------------------------------
+
+### Step 0: Install R, RStudio, and Mplus
+
+[Here](https://posit.co/download/rstudio-desktop/) you will find a guide to installing both R and R Studio.
+You can also install Mplus [here](https://www.statmodel.com/orderonline/).
+
+*Note*: The installation of Mplus requires a paid license with the mixture add-on.
+IMMERSE fellows will be given their own copy of Mplus for use during the one year training.
+
+------------------------------------------------------------------------
+
+## PART 2: Set-up
+
+------------------------------------------------------------------------
+
+### Step 1: Create a new R-project in RStudio
 
 R-projects help us organize our folders , filepaths, and scripts.
 To create a new R project:
@@ -59,7 +81,7 @@ To create a new R project:
 
 Click "New Directory" --\> New Project --\> Name your project
 
-## Step 2: Create an R-markdown document
+### Step 2: Create an R-markdown document
 
 An R-markdown file provides an authoring framework for data science that allows us to organize our reports using texts and code chunks.
 This document you are reading was made using R-markdown!
@@ -72,7 +94,7 @@ In the window that pops up, give the R-markdown a title such as "**Introduction 
 We want a clean document to start off with so delete everything from line 10 down.
 Go ahead and save this document to your Google Drive folder.
 
-## Step 3: Load packages
+### Step 3: Load packages
 
 Your first code chunk in any given markdown should be the packages you will be using.
 To insert a code chunk, etiher use the keyboard shortcut ctrl + alt + i or Code --\> Insert Chunk or click the green box with the letter C on it.
@@ -88,7 +110,13 @@ library(tidyverse) #collection of R packages designed for data science
 As a reminder, if a function does not work and you receive an error like this: `could not find function "random_function"`; or if you try to load a package and you receive an error like this: `` there is no package called `random_package` `` , then you will need to install the package using `install.packages("random_package")` in the console (the bottom-left window in R studio).
 Once you have installed the package you will *never* need to install it again, however you must *always* load in the packages at the beginning of your R markdown using `library(random_package)`, as shown in this document.
 
-## Step 4: Read in data
+------------------------------------------------------------------------
+
+## Part 3: Explore the data
+
+------------------------------------------------------------------------
+
+### Step 4: Read in data
 
 The data sets used in this walkthrough are used in Chapter 4 of Tabachnick & Fidell (2012).
 The chapter is a useful resource if you need more information on how to clean and screen your data and write up the results.
@@ -151,7 +179,7 @@ Use `names()` to view the variable names in the data set:
 names(data_csv)
 ```
 
-## Step 5: Descriptive Statistics
+### Step 5: Descriptive Statistics
 
 Let's look at descriptive statistics for each variable.
 Because looking at the ID variable's (`subno`) descriptives is unnecessary, we use `select()` to remove the variable by using the minus (`-`) sign:

@@ -1390,23 +1390,17 @@ overflow-y: auto;
 border: 1px solid #ddd;
 border-radius: 4px;
 }
-.tabset-dropdown > .nav-tabs > li.active:before {
-content: "";
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+content: "\e259";
 font-family: 'Glyphicons Halflings';
 display: inline-block;
 padding: 10px;
 border-right: 1px solid #ddd;
 }
 .tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
-content: "";
-border: none;
-}
-.tabset-dropdown > .nav-tabs.nav-tabs-open:before {
-content: "";
+content: "\e258";
 font-family: 'Glyphicons Halflings';
-display: inline-block;
-padding: 10px;
-border-right: 1px solid #ddd;
+border: none;
 }
 .tabset-dropdown > .nav-tabs > li.active {
 display: block;
@@ -1510,7 +1504,7 @@ border-radius: 0px;
 
 <h1 class="title toc-ignore">Introduction to R and RStudio</h1>
 <h4 class="author">IMMERSE Training Team</h4>
-<h4 class="date">Updated: December 05, 2022</h4>
+<h4 class="date">Updated: December 11, 2022</h4>
 
 </div>
 
@@ -1532,6 +1526,8 @@ fellowship.</p></li>
 </ul>
 <p>How to reference this walkthrough: <em>This work was supported by the
 IMMERSE Project</em> (IES - 305B220021)</p>
+<p>Visit our <a href="https://github.com/immerse-ucsb">GitHub</a>
+account to download the materials needed for this walkthrough.</p>
 <hr />
 </div>
 <div id="introduction-to-r-and-rstudio" class="section level1">
@@ -1539,8 +1535,26 @@ IMMERSE Project</em> (IES - 305B220021)</p>
 <p>This walkthrough is presented by the IMMERSE team and will go through
 some common tasks carried out in R. There are many free resources
 available to get started with R and RStudio. One of our favorites is <a href="https://r4ds.had.co.nz/"><em>R for Data Science</em></a>.</p>
-<div id="step-1-create-a-new-r-project-in-rstudio" class="section level2">
-<h2>Step 1: Create a new R-project in RStudio</h2>
+<hr />
+<div id="part-1-installation" class="section level2">
+<h2>PART 1: Installation</h2>
+<hr />
+<div id="step-0-install-r-rstudio-and-mplus" class="section level3">
+<h3>Step 0: Install R, RStudio, and Mplus</h3>
+<p><a href="https://posit.co/download/rstudio-desktop/">Here</a> you
+will find a guide to installing both R and R Studio. You can also
+install Mplus <a href="https://www.statmodel.com/orderonline/">here</a>.</p>
+<p><em>Note</em>: The installation of Mplus requires a paid license with
+the mixture add-on. IMMERSE fellows will be given their own copy of
+Mplus for use during the one year training.</p>
+<hr />
+</div>
+</div>
+<div id="part-2-set-up" class="section level2">
+<h2>PART 2: Set-up</h2>
+<hr />
+<div id="step-1-create-a-new-r-project-in-rstudio" class="section level3">
+<h3>Step 1: Create a new R-project in RStudio</h3>
 <p>R-projects help us organize our folders , filepaths, and scripts. To
 create a new R project:</p>
 <ul>
@@ -1548,8 +1562,8 @@ create a new R project:</p>
 </ul>
 <p>Click “New Directory” –&gt; New Project –&gt; Name your project</p>
 </div>
-<div id="step-2-create-an-r-markdown-document" class="section level2">
-<h2>Step 2: Create an R-markdown document</h2>
+<div id="step-2-create-an-r-markdown-document" class="section level3">
+<h3>Step 2: Create an R-markdown document</h3>
 <p>An R-markdown file provides an authoring framework for data science
 that allows us to organize our reports using texts and code chunks. This
 document you are reading was made using R-markdown!</p>
@@ -1563,8 +1577,8 @@ see a new markdown with some example text and code chunks. We want a
 clean document to start off with so delete everything from line 10 down.
 Go ahead and save this document to your Google Drive folder.</p>
 </div>
-<div id="step-3-load-packages" class="section level2">
-<h2>Step 3: Load packages</h2>
+<div id="step-3-load-packages" class="section level3">
+<h3>Step 3: Load packages</h3>
 <p>Your first code chunk in any given markdown should be the packages
 you will be using. To insert a code chunk, etiher use the keyboard
 shortcut ctrl + alt + i or Code –&gt; Insert Chunk or click the green
@@ -1585,9 +1599,14 @@ will <em>never</em> need to install it again, however you must
 <em>always</em> load in the packages at the beginning of your R markdown
 using <code>library(random_package)</code>, as shown in this
 document.</p>
+<hr />
 </div>
-<div id="step-4-read-in-data" class="section level2">
-<h2>Step 4: Read in data</h2>
+</div>
+<div id="part-3-explore-the-data" class="section level2">
+<h2>Part 3: Explore the data</h2>
+<hr />
+<div id="step-4-read-in-data" class="section level3">
+<h3>Step 4: Read in data</h3>
 <p>The data sets used in this walkthrough are used in Chapter 4 of
 Tabachnick &amp; Fidell (2012). The chapter is a useful resource if you
 need more information on how to clean and screen your data and write up
@@ -1733,8 +1752,8 @@ set:</p>
 <pre class="r"><code>names(data_csv)</code></pre>
 <pre><code>## [1] &quot;subno&quot;    &quot;timedrs&quot;  &quot;atthouse&quot;</code></pre>
 </div>
-<div id="step-5-descriptive-statistics" class="section level2">
-<h2>Step 5: Descriptive Statistics</h2>
+<div id="step-5-descriptive-statistics" class="section level3">
+<h3>Step 5: Descriptive Statistics</h3>
 <p>Let’s look at descriptive statistics for each variable. Because
 looking at the ID variable’s (<code>subno</code>) descriptives is
 unnecessary, we use <code>select()</code> to remove the variable by
@@ -1776,6 +1795,7 @@ using certain criteria.</p>
 ## timedrs      3.06  1.44
 ## atthouse    -0.10  0.40</code></pre>
 <pre class="r"><code>#You can use any operator to filter: &gt;, &lt;, ==, &gt;=, etc.</code></pre>
+</div>
 </div>
 </div>
 

@@ -128,9 +128,9 @@ Here is a table of the variables and their description:
 | **Variable** | **Description**                |
 | subno        | Subject/Participant number     |
 | timedrs      | Visits to health professionals |
-| attdrug      | Attitudes toward medication    |
+| atthouse     | Attitudes toward housework     |
 
-The style of code and package we will be using for this class is called [`tidyverse`](https://www.tidyverse.org/) .
+The style of code and package we will be using is called [`tidyverse`](https://www.tidyverse.org/) .
 Most functions are within the `tidyverse` package and if not, I've indicated the packages used in the code chunk above.
 
 **To read in data in R**:

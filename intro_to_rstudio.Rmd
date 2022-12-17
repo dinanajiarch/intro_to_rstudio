@@ -92,7 +92,7 @@ To create an R-markdown:
 
 In the window that pops up, give the R-markdown a title such as "**Introduction to R and RStudio**" Click "OK." You should see a new markdown with some example text and code chunks.
 We want a clean document to start off with so delete everything from line 10 down.
-Go ahead and save this document to your Google Drive folder.
+Go ahead and save this document in your R Project folder.
 
 ### Step 3: Load packages
 

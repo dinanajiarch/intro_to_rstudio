@@ -118,8 +118,9 @@ Once you have installed the package you will *never* need to install it again, h
 
 ### Step 4: Read in data
 
-The data sets used in this walkthrough are used in Chapter 4 of Tabachnick & Fidell (2012).
+The variables used in this example is from in Chapter 4 of Tabachnick & Fidell (2012).
 The chapter is a useful resource if you need more information on how to clean and screen your data and write up the results.
+Note that all examples used are for purposes of illustration only and are not intended to be interpreted substantively.
 
 Here is a table of the variables and their description:
 

@@ -154,6 +154,10 @@ tribble(
     footnote = "Civil Rights Data Collection (CRDC)",
     location = cells_title()) 
 
+#PDF Option: 
+#kableExtra::kable(df, caption = "LCA Indicators", booktabs = TRUE) %>% 
+#  kableExtra::kable_styling(latex_options=c("striped","scale_down"))
+
 ```
 
 **To read in data in R**:

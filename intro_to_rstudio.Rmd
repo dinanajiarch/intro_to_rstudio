@@ -20,12 +20,14 @@ htmltools::img(src = knitr::image_uri(file.path("images/immerse_hex.png")),
                style = 'position:absolute; top:0; right:0; padding:10px;',
                width ="250",
                height ="193")
+
 ```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, 
                       warning = FALSE,
                       message = FALSE) #Here, I have made it so that when you knit your .rmd, warnings and messages will not show up in the html markdown. 
+options(scipen=0)
 ```
 
 ------------------------------------------------------------------------
@@ -150,7 +152,7 @@ tribble(
   ) %>%
   tab_footnote(
     footnote = "Civil Rights Data Collection (CRDC)",
-    location = cells_title())
+    location = cells_title()) 
 
 ```
 
@@ -207,6 +209,16 @@ data %>%
 ------------------------------------------------------------------------
 
 ## References
+
+Hallquist, M. N., & Wiley, J. F. (2018). MplusAutomation: An R Package for Facilitating Large-Scale Latent Variable Analyses in Mplus. Structural equation modeling: a multidisciplinary journal, 25(4), 621-638.
+
+Muthén, L.K. and Muthén, B.O. (1998-2017). Mplus User's Guide. Eighth Edition. Los Angeles, CA: Muthén & Muthén
+
+US Department of Education Office for Civil Rights. (2014). Civil rights data collection data snapshot: School discipline. Issue brief no. 1.
+
+R Core Team (2017). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna, Austria. URL http://www.R-project.org/
+
+Wickham et al., (2019). Welcome to the tidyverse. Journal of Open Source Software, 4(43), 1686, https://doi.org/10.21105/joss.01686
 
 ------------------------------------------------------------------------
 

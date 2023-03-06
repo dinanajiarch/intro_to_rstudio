@@ -14,7 +14,7 @@
 
 # IMMERSE Project
 
-![](images/IESNewLogo.jpg){style="float: left;" width="300"}
+![](images/IESNewLogo.jpg)
 
 The Institute of Mixture Modeling for Equity-Oriented Researchers, Scholars, and Educators (IMMERSE) is an IES funded training grant (R305B220021) to support Education scholars in integrating mixture modeling into their research.
 
@@ -206,4 +206,4 @@ Wickham et al., (2019). Welcome to the tidyverse. Journal of Open Source Softwar
 
 ------------------------------------------------------------------------
 
-![](images/UCSB_Navy_mark.png){width="75%"}
+![](images/UCSB_Navy_mark.png)

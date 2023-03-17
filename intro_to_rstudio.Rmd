@@ -210,6 +210,20 @@ data %>%
 #You can use any operator to filter: >, <, ==, >=, etc.
 ```
 
+
+Since we have binary data (0,1), it would be helpful to look at the proportions:
+
+```{r}
+data %>% 
+  drop_na() %>% 
+  pivot_longer(report_dis:law_fte, names_to = "variable") %>% 
+  group_by(variable) %>% 
+  summarise(prop = sum(value)/n(),
+            n = n()) %>%
+  arrange(desc(prop))
+```
+
+
 ------------------------------------------------------------------------
 
 ## References

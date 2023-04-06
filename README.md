@@ -143,8 +143,7 @@ tribble(
 **To read in data in R**:
 
 ```{r}
-data <- read_csv(here("data", "crdc_lca_data.csv")) %>% 
-  mutate_if(is.character, as.numeric)
+data <- read_csv(here("data", "crdc_lca_data.csv")) 
 
 # Ways to view data in R:
 # 1. click on the data in your Global Environment (upper right pane) or use...
@@ -183,7 +182,7 @@ We can use `tidyverse::filter()` to subset the data using certain criteria.
 
 ```{r}
 data %>% 
-  filter(leaid == 408800) %>% 
+  filter(leaid == "0408800") %>% 
   describe() 
 
 
